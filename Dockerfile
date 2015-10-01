@@ -28,7 +28,7 @@ RUN sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list && \
         inetutils-ping \
         openssl \
         openssh-server \
-        procps psmisc python python-software-properties \
+        procps psmisc python python-software-properties p7zip \
         rsync rsyslog \
         software-properties-common ssl-cert sudo supervisor \
         tar telnet screen tmux traceroute tree \
