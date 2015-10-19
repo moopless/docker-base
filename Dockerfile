@@ -40,3 +40,4 @@ RUN sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
+RUN ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
