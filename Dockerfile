@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER mooplessbrew@gmail.com
 
 ENV DEBIAN_FRONTEND="noninteractive" \
@@ -33,7 +33,7 @@ RUN sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list && \
         software-properties-common ssl-cert sudo supervisor \
         tar telnet screen tmux traceroute tree \
         wget whois \
-        unrar unzip \
+        unrar-free unzip \
         vim \
         xz-utils && \
     apt-get -y autoremove && \
