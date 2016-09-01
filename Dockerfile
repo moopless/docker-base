@@ -11,9 +11,7 @@ RUN sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list && \
     apt-get -q update && \
     apt-get install -qy locales && \
     echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && \
-    echo 'en_ZA.UTF-8 UTF-8' >> /etc/locale.gen && \
     locale-gen en_US.UTF-8 && \
-    locale-gen en_ZA.UTF-8 && \
     echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup &&\
     echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
 \
@@ -22,22 +20,19 @@ RUN sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list && \
         apt-transport-https \
         bzip2 \
         ca-certificates curl \
-        dnsutils \
-        fping \
         git \
         inetutils-ping \
         openssl \
-        openssh-server \
         procps psmisc python python-software-properties p7zip-full \
         rsync rsyslog \
         software-properties-common ssl-cert sudo supervisor \
-        tar telnet screen tmux traceroute tree \
+        tar telnet screen tmux traceroute \
         wget whois \
         unrar-free unzip \
-        vim \
+        vim-tiny \
         xz-utils && \
     apt-get -y autoremove && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
-RUN ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+RUN ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
