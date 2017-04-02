@@ -26,8 +26,8 @@ RUN sed -i "/^# deb.*multiverse/ s/^# //" /etc/apt/sources.list && \
         procps psmisc python python-software-properties p7zip-full \
         rsync rsyslog \
         software-properties-common ssl-cert sudo supervisor \
-        tar telnet screen tmux traceroute \
-        wget whois \
+        tar \
+        wget \
         unrar-free unzip \
         vim-tiny \
         xz-utils && \
